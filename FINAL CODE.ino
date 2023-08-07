@@ -326,45 +326,7 @@ void Task1code(void* pvParameters) {
   }
 }
 
-//   while (1) // A Task shall never return or exit.
-//    {
-//
-//
-//     if (mylinecount>=20 && mqttClient.connected()){
-////         xSemaphoreTake(mqttSemaphore, portMAX_DELAY); // Take the semaphore before accessing MQTT resources
-//            int t1=millis();
-//            publishStoredMessages();
-//            int t2=millis();
-//             Serial.println("period :"+String(t2-t1));
-////         xSemaphoreGive(mqttSemaphore); // Give back the semaphore after accessing MQTT resources
-//                 mylinecount=0;
-//
-//             }
-//
-////           xSemaphoreTake(mqttSemaphore, portMAX_DELAY); // Take the semaphore before accessing MQTT resources
-//            if(!mqttClient.connected()){
-//              reconnectToMqtt();
-//                }
-////           xSemaphoreGive(mqttSemaphore); // Give back the semaphore after accessing MQTT resources
-//
-//        vTaskDelay(2);
 
-
-//          }
-//  }
-
-//
-////Task2 to connect to MQTT
-//void Task2code( void * pvParameters ){
-//  Serial.print("Task2 running on core ");
-//  Serial.println(xPortGetCoreID());
-//
-//      if(!mqttClient.connected()){
-//        reconnectToMqtt();
-//          }
-//
-//          vTaskDelay(10/portTICK_PERIOD_MS);
-//  }
 
 
 bool isFileEmpty(const String& filename) {
@@ -396,15 +358,7 @@ void setup() {
     NULL,      /* Task handle to keep track of created task */
     0);        /* pin task to core 0 */
 
-  //xTaskCreatePinnedToCore(
-  //                    Task2code,   /* Task function. */
-  //                    "Task2",     /* name of task. */
-  //                    10000,       /* Stack size of task */
-  //                    NULL,        /* parameter of the task */
-  //                    1,           /* priority of the task */
-  //                    &Task2,      /* Task handle to keep track of created task */
-  //                    0);          /* pin task to core 0 */
-
+  
   //SX1509 SETUP
   //    Wire.begin(); //Initialize I2C bus
   //    io.begin();
